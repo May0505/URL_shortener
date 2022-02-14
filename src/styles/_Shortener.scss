@@ -1,0 +1,58 @@
+button {
+  &:hover {
+    background-color: hsl(180, 63%, 66%);
+  }
+}
+
+.shortener-section {
+  background-image: url(/src/images/bg-shorten-mobile.svg);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 5px;
+  position: relative;
+  top: -3.5rem;
+  left: calc(50% - 160px);
+  width: 320px;
+  grid-area: search;
+  input,
+  .shortener-btn {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+  }
+  input::placeholder {
+    color: hsl(0, 0%, 75%);
+  }
+
+  .shortener-btn {
+    margin-top: 0.5rem;
+    background-color: hsl(180, 66%, 49%);
+    color: #fff;
+    &:hover {
+      background-color: hsl(180, 63%, 66%);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .shortener-section {
+    background-image: url(/src/images/bg-shorten-desktop.svg);
+    background-size: cover;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 1200px;
+    top: -3rem;
+    left: calc(50% - 600px);
+    padding: 2rem;
+    .input {
+      width: 80%;
+    }
+    .shortener-btn {
+      width: 15%;
+      margin: 0;
+    }
+  }
+}

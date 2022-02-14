@@ -1,0 +1,52 @@
+.show-shorten {
+  margin-bottom: 1rem;
+  position: relative;
+  left: calc(50% - 160px);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 320px;
+  border-radius: 1rem;
+  .input-url,
+  .shorten-url {
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+  }
+  .shorten-url {
+    display: flex;
+    flex-direction: column;
+    color: hsl(180, 66%, 49%);
+  }
+  .copy-btn {
+    border-radius: 5px;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .show-shorten {
+    text-align: start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    left: calc(50% - 600px);
+    hr {
+      display: none;
+    }
+    .input-url {
+      max-width: 700px;
+      padding: 0 1rem;
+      flex-direction: row;
+    }
+    .shorten-url {
+      padding: 0 1rem;
+      flex-direction: row;
+    }
+    .copy-btn {
+      margin: 1rem;
+    }
+  }
+}

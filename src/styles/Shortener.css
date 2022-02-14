@@ -1,0 +1,84 @@
+button:hover {
+  background-color: #72dfdf;
+}
+
+.shorter-section {
+  background-image: url(/src/images/bg-shorten-mobile.svg);
+  padding: 1.5rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #3b3054;
+  border-radius: 5px;
+  position: relative;
+  top: -3.5rem;
+  left: calc(50% - 160px);
+  width: 320px;
+  grid-area: search;
+}
+
+.shorter-section input,
+.shorter-section .shorter-btn {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.shorter-section input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.shorter-section input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.shorter-section input::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.shorter-section input::placeholder {
+  color: #bfbfbf;
+}
+
+.shorter-section .shorter-btn {
+  margin-top: 0.5rem;
+  background-color: #2acfcf;
+  color: #fff;
+}
+
+.shorter-section .shorter-btn:hover {
+  background-color: #72dfdf;
+}
+
+@media screen and (min-width: 1440px) {
+  .shorter-section {
+    background-image: url(/src/images/bg-shorten-desktop.svg);
+    background-size: cover;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 1200px;
+    top: -3rem;
+    left: calc(50% - 600px);
+    padding: 2rem;
+  }
+  .shorter-section .input {
+    width: 80%;
+  }
+  .shorter-section .shorter-btn {
+    width: 15%;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=Shortener.css.map */

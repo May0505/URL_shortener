@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+.panel {
+  padding-top: 85px;
+  min-height: 100vh;
+  text-align: center;
+  button {
+    padding: 0.8rem 2.5rem;
+    background-color: hsl(180, 66%, 49%);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(180, 63%, 66%);
+    }
+  }
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 270px);
+    grid-template-areas:
+      "img img"
+      "content content"
+      "search search";
+    position: relative;
+    .banner-img {
+      background-image: url(/src/images/illustration-working.svg);
+      background-size: cover;
+      width: 100%;
+      height: 300px;
+      grid-area: img;
+    }
+    .banner-content {
+      grid-area: content;
+      margin-top: 5rem;
+    }
+    .content-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .content-description {
+      color: hsl(257, 7%, 63%);
+      padding: 1.5rem;
+    }
+  }
+  .shorter {
+    position: relative;
+    background-color: hsl(0, 0%, 95%);
+  }
+  .down-panel {
+    padding: 10rem 2rem 0rem 2rem;
+    background-color: hsl(0, 0%, 95%);
+    .desc-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .desc-content {
+      color: hsl(257, 7%, 63%);
+      padding: 1rem 1rem 4rem 1rem;
+    }
+    .items {
+      .item1,
+      .item2,
+      .item3 {
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 1rem 0 5rem 0;
+        position: relative;
+        .item-title {
+          padding-top: 4rem;
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+        .item-content {
+          padding: 1.5rem;
+          color: hsl(257, 7%, 63%);
+        }
+      }
+      .item-img {
+        position: absolute;
+        top: -40px;
+        left: calc(50% - 40px);
+        background-color: hsl(257, 27%, 26%);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        padding: 1rem;
+        text-align: center;
+      }
+      .connect-line {
+        display: block;
+        height: 50px;
+        width: 6px;
+        background-color: hsl(180, 66%, 49%);
+        position: absolute;
+        left: calc(50% - 3px);
+        // transform: rotate(0.5turn);
+      }
+    }
+  }
+  .result {
+    background-color: hsl(0, 0%, 95%);
+    padding: 1rem;
+  }
+  .boost-section {
+    background-image: url(/src/images/bg-boost-mobile.svg);
+    background-size: 110% 100%;
+    background-repeat: no-repeat;
+    background-color: hsl(257, 27%, 26%);
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .boost-title {
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .panel {
+    .banner {
+      grid-template-rows: repeat(2, 300px);
+      grid-template-areas:
+        "content img"
+        "content img";
+      .banner-img {
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+      }
+      .banner-content {
+        text-align: start;
+        margin: 3rem 1rem 3rem 5rem;
+        padding-left: 3rem;
+        .content-title {
+          font-size: 4rem;
+        }
+        .content-description {
+          padding: 0 5rem 0 0;
+        }
+        .content-btn {
+          margin: 1rem 0;
+        }
+      }
+    }
+    .down-panel {
+      .items {
+        display: flex;
+        padding-bottom: 2rem;
+        .item1,
+        .item2,
+        .item3 {
+          width: 30%;
+          margin: 0 1rem;
+          text-align: start;
+          .item-title {
+            padding-left: 1.5rem;
+          }
+          .item-content {
+            padding-right: 3rem;
+          }
+        }
+        .item1 {
+          margin-bottom: 4rem;
+        }
+        .item2 {
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+        .item3 {
+          margin-top: 4rem;
+        }
+        .connect-line {
+          width: 50px;
+          height: 6px;
+          left: 100%;
+          bottom: 40%;
+          // transform: rotate(45deg);
+        }
+        .item-img {
+          left: 20px;
+          padding: 1rem;
+        }
+        .desc-content {
+          padding: 1rem 26rem 4rem 26rem;
+        }
+      }
+    }
+    .boost-section {
+      background-image: url(/src/images/bg-boost-desktop.svg);
+    }
+  }
+}
+
+@import "./Nav";
+@import "./Footer";
+@import "./Shortener";
+@import "./ShortLink";

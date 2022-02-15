@@ -1,39 +1,33 @@
 import React, { useState } from "react";
 
-const Shortener = ({ shortenURL, setInput }) => {
-  let [inputValue, setInputValue] = useState(true);
+const Shortener = ({ shortenURL, setInput, input }) => {
   const inputHandler = (e) => {
-    setInput(e.target.value);
+    setInput({ value: e.target.value, empty: false });
   };
 
   const enterHandler = (e) => {
     if (e.key === "Enter") {
       shortenURL();
     }
-    if (e.target.value.trim().length <= 0) {
-      setInputValue(false);
+    if (input.value.trim().length <= 0) {
+      setInput({ value: "", empty: true });
     } else {
-      setInputValue(true);
+      setInput({ value: e.target.value, empty: false });
+    }
+  };
+
+  const btnHandler = (e) => {
+    if (input.value.trim().length <= 0) {
+      setInput({ value: "", empty: true });
+    } else {
+      setInput({ value: e.target.value, empty: false });
+      shortenURL();
     }
   };
 
   return (
     <div>
-      {inputValue ? (
-        <div className='shortener-section'>
-          <input
-            type='text'
-            className='input'
-            placeholder='Shorten a link here...'
-            onChange={inputHandler}
-            onKeyPress={enterHandler}
-          />
-
-          <button className='shortener-btn' onClick={shortenURL}>
-            Shorten it!
-          </button>
-        </div>
-      ) : (
+      {input.empty ? (
         <div className='shortener-section'>
           <input
             type='text'
@@ -52,7 +46,21 @@ const Shortener = ({ shortenURL, setInput }) => {
             }}>
             Please add a link
           </p>
-          <button className='shortener-btn' onClick={shortenURL}>
+          <button className='shortener-btn' onClick={btnHandler}>
+            Shorten it!
+          </button>
+        </div>
+      ) : (
+        <div className='shortener-section'>
+          <input
+            type='text'
+            className='input'
+            placeholder='Shorten a link here...'
+            onChange={inputHandler}
+            onKeyPress={enterHandler}
+          />
+
+          <button className='shortener-btn' onClick={btnHandler}>
             Shorten it!
           </button>
         </div>

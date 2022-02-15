@@ -7,7 +7,7 @@ import detailedRcords from "../images/icon-detailed-records.svg";
 import fullyCustomizable from "../images/icon-fully-customizable.svg";
 
 const Homepage = () => {
-  let [input, setInput] = useState("");
+  let [input, setInput] = useState({ value: "", empty: false });
   let [currentInput, setCurrentInput] = useState("");
   let [data, setData] = useState([]);
   const intialURL = `https://api.shrtco.de/v2/shorten?url=${currentInput}`;
@@ -46,9 +46,10 @@ const Homepage = () => {
       <div className='shorter'>
         <Shortener
           shortenURL={() => {
-            setCurrentInput(input);
+            setCurrentInput(input.value);
           }}
           setInput={setInput}
+          input={input}
         />
       </div>
       <div className='result'>

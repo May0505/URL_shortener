@@ -1,6 +1,6 @@
 button {
   &:hover {
-    background-color: hsl(180, 63%, 66%);
+    background-color: $bg_color_hover;
   }
 }
 
@@ -10,7 +10,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: hsl(257, 27%, 26%);
+  background-color: $bg_color;
   border-radius: 5px;
   position: relative;
   top: -3.5rem;
@@ -24,15 +24,15 @@ button {
     border: none;
   }
   input::placeholder {
-    color: hsl(0, 0%, 75%);
+    color: $gray;
   }
 
   .shortener-btn {
     margin-top: 0.5rem;
-    background-color: hsl(180, 66%, 49%);
-    color: #fff;
+    background-color: $main_color;
+    color: $white;
     &:hover {
-      background-color: hsl(180, 63%, 66%);
+      background-color: $main_color_hover;
     }
   }
 }

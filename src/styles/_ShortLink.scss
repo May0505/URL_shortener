@@ -4,7 +4,7 @@
   left: calc(50% - 160px);
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: $white;
   width: 320px;
   border-radius: 1rem;
   .input-url,
@@ -17,7 +17,7 @@
   .shorten-url {
     display: flex;
     flex-direction: column;
-    color: hsl(180, 66%, 49%);
+    color: $main_color;
   }
   .copy-btn {
     border-radius: 5px;

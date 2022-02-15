@@ -337,10 +337,8 @@ header nav {
   transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  /*   scale(x, y) */
   -webkit-transform: scale(1, 0);
           transform: scale(1, 0);
-  /*   由上而下展開 */
   -webkit-transform-origin: top;
           transform-origin: top;
   padding: 2rem;
@@ -469,7 +467,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #232127;
+  background-color: #3b3054;
   width: 100%;
   color: #fff;
 }

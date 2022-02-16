@@ -10,6 +10,8 @@ const Homepage = () => {
   let [input, setInput] = useState({ value: "", empty: false });
   let [currentInput, setCurrentInput] = useState("");
   let [data, setData] = useState([]);
+  let [hasError, setHasError] = useState(false);
+
   const intialURL = `https://api.shrtco.de/v2/shorten?url=${currentInput}`;
 
   async function shortenURL(url) {
@@ -20,8 +22,9 @@ const Homepage = () => {
       let shortUrl = await dataFetch.json();
       setData(data.concat(shortUrl.result));
     } catch (error) {
-      alert("輸入有誤，請重新輸入！");
-      console.log(`Error: ${error}`);
+      console.log(error, hasError);
+      alert("輸入錯誤，請重新輸入！");
+      location.reload();
     }
   }
 

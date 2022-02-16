@@ -24,7 +24,7 @@ const Homepage = () => {
     } catch (error) {
       console.log(error, hasError);
       alert("輸入錯誤，請重新輸入！");
-      location.reload();
+      window.location.reload();
     }
   }
 

@@ -10,9 +10,10 @@ const Homepage = () => {
   let [input, setInput] = useState({ value: "", empty: false });
   let [currentInput, setCurrentInput] = useState("");
   let [data, setData] = useState([]);
-  let [hasError, setHasError] = useState(false);
 
   const intialURL = `https://api.shrtco.de/v2/shorten?url=${currentInput}`;
+
+  // fetch data from api
 
   async function shortenURL(url) {
     try {
@@ -21,8 +22,7 @@ const Homepage = () => {
       });
       let shortUrl = await dataFetch.json();
       setData(data.concat(shortUrl.result));
-    } catch (error) {
-      console.log(error, hasError);
+    } catch {
       alert("輸入錯誤，請重新輸入！");
       window.location.reload();
     }
@@ -33,8 +33,9 @@ const Homepage = () => {
       shortenURL(intialURL);
     }
   }, [currentInput]);
+
   return (
-    <div className='panel'>
+    <main className='panel'>
       <div className='banner'>
         <div className='banner-img'></div>
         <div className='banner-content'>
@@ -111,7 +112,7 @@ const Homepage = () => {
         <div className='boost-title'>Boost yours links today</div>
         <button className='boost-btn'>Get started</button>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -272,8 +272,8 @@ header .navbar-toggle:checked ~ nav {
 header .navbar-toggle:checked ~ nav .item {
   opacity: 1;
   /*   讓透明度轉場延遲顯示 */
-  -webkit-transition: opacity 0.2s ease-out 0.5s5s;
-  transition: opacity 0.2s ease-out 0.5s5s;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 header .navbar-toggle-label {
@@ -333,10 +333,10 @@ header nav {
   width: 90%;
   position: absolute;
   top: 120%;
-  -webkit-transition: -webkit-transform 0.2s ease-out;
-  transition: -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
   -webkit-transform: scale(1, 0);
           transform: scale(1, 0);
   -webkit-transform-origin: top;
@@ -467,7 +467,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #3b3054;
+  background-color: #232127;
   width: 100%;
   color: #fff;
 }
@@ -502,7 +502,7 @@ footer .item .item-content {
 }
 
 footer .item .item-content:hover {
-  color: #2acfcf;
+  color: #72dfdf;
 }
 
 footer .social-media {
@@ -515,7 +515,7 @@ footer .social-media .social-media-link {
 }
 
 footer .social-media .social-media-link:hover {
-  color: #2acfcf;
+  color: #72dfdf;
 }
 
 @media screen and (min-width: 1440px) {

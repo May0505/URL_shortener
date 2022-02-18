@@ -21,7 +21,7 @@ const Nav = () => {
         </div>
       </nav>
       <label htmlFor='navbar-toggle' className='navbar-toggle-label'>
-        <div className='hamburger'></div>
+        <span className='hamburger'></span>
       </label>
     </header>
   );

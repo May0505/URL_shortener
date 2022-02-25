@@ -19,6 +19,14 @@ $white: #fff;
   min-height: 100vh;
   text-align: center;
 
+  .build-img {
+    width: 80%;
+    height: 400px;
+    object-fit: contain;
+    opacity: 0.7;
+    grid-area: img;
+  }
+
   button {
     padding: 0.8rem 2.5rem;
     background-color: $main_color;
@@ -33,6 +41,7 @@ $white: #fff;
   }
   .banner {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 270px);
     grid-template-areas:

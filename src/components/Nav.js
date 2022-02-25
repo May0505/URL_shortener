@@ -1,17 +1,32 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 
 const Nav = () => {
   return (
     <header>
-      <img src={logo} alt='' />
+      <Link to='/'>
+        <img src={logo} alt='' />
+      </Link>
       <input type='checkbox' className='navbar-toggle' id='navbar-toggle' />
       <nav>
         <div className='items'>
           <ul>
-            <li className='item'>Features</li>
-            <li className='item'>Pricing</li>
-            <li className='item'>Resources</li>
+            <li className='item'>
+              <Link to='/Features' className='item-link'>
+                Features
+              </Link>
+            </li>
+            <li className='item'>
+              <Link to='/Pricing' className='item-link'>
+                Pricing
+              </Link>
+            </li>
+            <li className='item'>
+              <Link to='/Resources' className='item-link'>
+                Resources
+              </Link>
+            </li>
           </ul>
         </div>
         <hr />

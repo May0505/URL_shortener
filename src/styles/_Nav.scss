@@ -79,6 +79,13 @@ header {
     cursor: pointer;
     color: $white;
     font-weight: 600;
+    .item-link {
+      text-decoration: none;
+      color: $gray;
+      &:hover {
+        color: $grayish;
+      }
+    }
   }
   hr {
     margin: 1rem 0;

@@ -46,16 +46,28 @@ const Footer = () => {
         </li>
       </ul>
       <div className='social-media'>
-        <a href='#' className='social-media-link'>
+        <a
+          href='https://www.facebook.com/'
+          className='social-media-link'
+          target='_blank'>
           <i className='facebook fab fa-brands fa-facebook-square fa-lg'></i>
         </a>
-        <a href='#' className='social-media-link'>
+        <a
+          href='https://twitter.com'
+          className='social-media-link'
+          target='_blank'>
           <i className='fa-brands fab fa-twitter fa-lg'></i>
         </a>
-        <a href='#' className='social-media-link'>
+        <a
+          href='https://www.pinterest.com/'
+          className='social-media-link'
+          target='_blank'>
           <i className='fa-brands fab fa-pinterest fa-lg'></i>
         </a>
-        <a href='#' className='social-media-link'>
+        <a
+          href='https://www.instagram.com/'
+          className='social-media-link'
+          target='_blank'>
           <i className='fa-brands fab fa-instagram fa-lg'></i>
         </a>
       </div>

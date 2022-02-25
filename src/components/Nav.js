@@ -5,7 +5,7 @@ import logo from "../images/logo.svg";
 const Nav = () => {
   return (
     <header>
-      <Link to='/'>
+      <Link to='/URL_shortener'>
         <img src={logo} alt='' />
       </Link>
       <input type='checkbox' className='navbar-toggle' id='navbar-toggle' />

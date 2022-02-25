@@ -13,7 +13,7 @@ const App = () => {
     <div className='App'>
       <Nav />
       <Routes>
-        <Route path='/' element={<Homepage />} />
+        <Route path='/URL_shortener' element={<Homepage />} />
         <Route path='features' element={<Features />} />
         <Route path='resources' element={<Resources />} />
         <Route path='pricing' element={<Pricing />} />

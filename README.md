@@ -21,10 +21,9 @@
 
 <pre><code>cd URL_shortener</code></pre><br />
 
-`3.` 安裝 npm 及 clipboard 套件
+`3.` 安裝 npm
 
 <pre>先輸入<code>npm install</code></pre>
-<pre>再輸入<code>npm install --save react-copy-to-clipboard</code></pre><br >
 
 `4.` 安裝完畢後，繼續輸入:<br />
 

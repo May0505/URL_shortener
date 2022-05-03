@@ -59,7 +59,7 @@ const Homepage = () => {
       <div className='result'>
         {data &&
           data.map((d) => {
-            return <Shortlink data={d} />;
+            return <Shortlink data={d} key={d.code} />;
           })}
       </div>
 
